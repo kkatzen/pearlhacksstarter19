@@ -1,0 +1,145 @@
+html,
+body {
+  width: 100%;
+	margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Heebo', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+
+header h1,
+header p,
+header button {
+  line-height: 32px;
+  font-weight: 500;
+  padding: 16px 30px;
+  display: inline-block;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+header .right {
+  float: right;
+}
+
+header p,
+header button {
+  font-size: 18px;
+}
+
+header button {
+  border: none;
+  background-color: #000;
+  color: #6699ff;
+  text-transform: uppercase;
+  width: 160px;
+}
+
+header #logout {
+  background-color: #e2e2e2;
+  color: #000;
+}
+
+
+#color-input-wrapper,
+#button-wrapper {
+  background-color: #6699ff;
+  height: 170px;
+}
+
+.button-text {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 36px;
+  line-height: 50px;
+  padding: 60px 0;
+  font-weight: 500;
+  height: 50px;
+}
+
+#color-input-wrapper input {
+  width: 100%;
+  height: 170px;
+  opacity: .001;
+  position: absolute;
+  x: 0;
+  y: 0;
+}
+
+#button-wrapper h4 {
+  width: 56%;
+  background-color: rgba(0, 0, 0, 0.4);
+  float: left;
+}
+
+#button-wrapper #save-button {
+  width: 44%;
+}
+
+#button-wrapper h4:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#color-list-wrapper {
+  padding: 15px;
+  width: calc(100% - 30px)
+}
+
+#color-list-wrapper h2 {
+  font-weight: 400;
+  padding: 60px 15px 15px 15px;
+  color: #909090;
+}
+
+#color-list-wrapper .color-item {
+  width: 12.5%;
+  float: left;
+  min-width: 105px;
+}
+
+#color-list-wrapper .color-item.selected {
+  background-color: #EBEBEB;
+}
+
+#color-list-wrapper .color-item .swatch {
+  width: calc(100% - 30px);
+  height: 90px;
+  margin: 15px;
+  background-color: #0099ff;
+}
+
+#color-list-wrapper .color-item p {
+  margin: 0 15px 24px 15px;
+  color: #909090;
+}
+
+.hidden {
+	display: none;
+}
+
+
+/* Make it work at small screen widths */
+@media (max-width: 990px) {
+  h4.button-text {
+    font-size: 30px;
+  }
+  #button-wrapper h4 {
+    width: 58%;
+    background-color: rgba(0, 0, 0, 0.4);
+    float: left;
+  }
+  #button-wrapper #save-button {
+    width: 42%;
+  }
+  #color-list-wrapper .color-item {
+    width: 16.6%;
+  }
+}

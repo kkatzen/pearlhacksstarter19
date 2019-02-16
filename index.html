@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <title>Favorite Color</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="control.js"></script>
+
+  </head>
+  <body onload="loadColors()">
+
+    <header>
+      <h1>Pearl Hacks Color</h1>
+      <div class="right">
+        <p id="username">Maegan</p>
+        <button id="logout" onclick="logout()" class="hidden">Logout</button>
+        <button id="login" onclick="login()">Login</button>
+      </div>
+    </header>
+
+    <section id="color-input-wrapper">
+      <input type="color" value="#6699ff" onchange="updateColor(this)">
+      <h2 class="button-text">click to add your favorite color</h2>
+    </section>
+
+    <section id="button-wrapper">
+      <h4 id="save-button" class="button-text" onclick="saveColor()">
+        save your color
+      </h4>
+      <h4 id="find-button" class="button-text" onclick="findComplimentaryColor()">
+        find complimentary color
+      </h4>
+    </section>
+
+    <section id="color-list-wrapper">
+      <h2>Everyone's colors</h2>
+      <div id="color-list">
+      </div>
+    </section>
+  </body>
+</html>
