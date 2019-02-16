@@ -28,11 +28,14 @@ function rgbToHex(rgb){
 }
 
 // yourColor is a hex color. 6 digits 0-9 and A-F. Do not include #.
-// colorList is an array of hex colors. 
+// colorList is an array of hex colors.
 var getComplimentaryColor = function(yourColor, colorList) {
   var yourRgb = hexToRgb(yourColor);
   var yourHsv = rgbToHsv(yourRgb[0], yourRgb[1], yourRgb[2]);
   var goalComplimentaryHue = yourHsv[0] - 180;
+  if (goalComplimentaryHue < 0) {
+    goalComplimentaryHue = 360 + goalComplimentaryHue;
+  }
   var currRgb, currHsv;
   var currHueDistance;
   var closestHueDistance = 360;
